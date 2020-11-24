@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         'use strict';
 
-        
+        const mixedArray = [14, 58, 96, true, 'cat', 41, 'dog'];
+        const element = 14;
+
+        const newObjectFromArray = (mixedArray, element) => ({
+                exists: mixedArray.includes(element),
+                indexElement: mixedArray.indexOf(element),
+                allElementIsANumber: mixedArray.every(item => typeof item === 'number'),
+                someElementIsANumber: mixedArray.some(item => typeof item === 'number')
+        });
+        console.log(newObjectFromArray(mixedArray, element));
+
     </script>
 </body>
+
 </html>
